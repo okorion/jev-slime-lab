@@ -1,0 +1,233 @@
+{
+  "version": 1,
+  "mode": "jev",
+  "initial": {
+    "seed": 42,
+    "tiles": [
+      "hazard",
+      "grass",
+      "grass",
+      "grass",
+      "hazard",
+      "grass",
+      "food",
+      "grass",
+      "grass",
+      "grass",
+      "food",
+      "grass",
+      "grass",
+      "food",
+      "hazard",
+      "grass",
+      "grass",
+      "grass",
+      "rock",
+      "grass",
+      "grass",
+      "rock",
+      "grass",
+      "rock",
+      "food",
+      "rock",
+      "hazard",
+      "grass",
+      "grass",
+      "rock",
+      "hazard",
+      "food",
+      "grass",
+      "grass",
+      "food",
+      "grass",
+      "rock",
+      "rock",
+      "grass",
+      "grass",
+      "shelter",
+      "grass",
+      "hazard",
+      "food",
+      "grass",
+      "grass",
+      "grass",
+      "hazard",
+      "food",
+      "grass",
+      "rock",
+      "grass",
+      "grass",
+      "grass",
+      "grass",
+      "rock",
+      "grass",
+      "grass",
+      "grass",
+      "hazard",
+      "rock",
+      "rock",
+      "food",
+      "grass",
+      "grass",
+      "grass",
+      "rock",
+      "grass",
+      "grass",
+      "food",
+      "grass",
+      "hazard",
+      "grass",
+      "grass",
+      "hazard",
+      "grass",
+      "grass",
+      "grass",
+      "grass",
+      "grass",
+      "food"
+    ],
+    "turn": 0,
+    "x": 4,
+    "y": 4,
+    "hp": 100,
+    "energy": 65,
+    "food": 0,
+    "hazards": 0,
+    "path": [
+      40
+    ],
+    "ended": false
+  },
+  "history": [
+    {
+      "turn": 1,
+      "action": "east",
+      "hp": 100,
+      "energy": 60,
+      "baselineHp": 100,
+      "source": "Jev 실측",
+      "decision": {
+        "choice": "east",
+        "probabilities": {
+          "east": 0.42,
+          "west": 0.11,
+          "rest": 0.07,
+          "south": 0.21,
+          "north": 0.19
+        },
+        "confidence": 0.28,
+        "model": "jev-1.13.0",
+        "inputTokens": 939,
+        "latencyMs": 565,
+        "estimatedUsd": 0.000039438000000000004
+      },
+      "instruction": "위험을 피하면서 먹이를 찾아. 체력이 낮아지면 안전한 곳에서 쉬어."
+    },
+    {
+      "turn": 2,
+      "action": "east",
+      "hp": 82,
+      "energy": 55,
+      "baselineHp": 100,
+      "source": "Jev 실측",
+      "decision": {
+        "choice": "east",
+        "probabilities": {
+          "north": 0.2,
+          "west": 0.18,
+          "rest": 0.13,
+          "east": 0.49
+        },
+        "confidence": 0.33,
+        "model": "jev-1.13.0",
+        "inputTokens": 927,
+        "latencyMs": 217,
+        "estimatedUsd": 0.000038934000000000004
+      },
+      "instruction": "위험을 피하면서 먹이를 찾아. 체력이 낮아지면 안전한 곳에서 쉬어."
+    },
+    {
+      "turn": 3,
+      "action": "east",
+      "hp": 82,
+      "energy": 50,
+      "baselineHp": 100,
+      "source": "Jev 실측",
+      "decision": {
+        "choice": "east",
+        "probabilities": {
+          "rest": 0.11,
+          "north": 0.19,
+          "west": 0.19,
+          "south": 0.16,
+          "east": 0.35
+        },
+        "confidence": 0.19,
+        "model": "jev-1.13.0",
+        "inputTokens": 944,
+        "latencyMs": 242,
+        "estimatedUsd": 0.000039648000000000004
+      },
+      "instruction": "위험을 피하면서 먹이를 찾아. 체력이 낮아지면 안전한 곳에서 쉬어."
+    },
+    {
+      "turn": 4,
+      "action": "eat",
+      "hp": 90,
+      "energy": 80,
+      "baselineHp": 100,
+      "source": "Jev 실측",
+      "decision": {
+        "choice": "eat",
+        "probabilities": {
+          "east": 0.17,
+          "north": 0.06,
+          "rest": 0.1,
+          "south": 0.09,
+          "eat": 0.49,
+          "west": 0.09
+        },
+        "confidence": 0.39,
+        "model": "jev-1.13.0",
+        "inputTokens": 962,
+        "latencyMs": 241,
+        "estimatedUsd": 0.000040404
+      },
+      "instruction": "위험을 피하면서 먹이를 찾아. 체력이 낮아지면 안전한 곳에서 쉬어."
+    },
+    {
+      "turn": 5,
+      "action": "east",
+      "hp": 90,
+      "energy": 75,
+      "baselineHp": 100,
+      "source": "Jev 실측",
+      "decision": {
+        "choice": "east",
+        "probabilities": {
+          "west": 0.18,
+          "south": 0.15,
+          "east": 0.41,
+          "rest": 0.08,
+          "north": 0.18
+        },
+        "confidence": 0.26,
+        "model": "jev-1.13.0",
+        "inputTokens": 950,
+        "latencyMs": 280,
+        "estimatedUsd": 0.00003990000000000001
+      },
+      "instruction": "위험을 피하면서 먹이를 찾아. 체력이 낮아지면 안전한 곳에서 쉬어."
+    }
+  ],
+  "sessionUsage": {
+    "calls": 5,
+    "inputTokens": 4722,
+    "estimatedUsd": 0.000198324
+  },
+  "price": {
+    "usdPerMillionInputTokens": 0.042,
+    "checked": "2026-09-21"
+  },
+  "notes": "confidence는 정확도가 아닙니다. 중단/실패 요청 비용은 세션 합계에 포함되지 않을 수 있습니다."
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vercel/
+.env*
+!.env.example
+test-results/
+playwright-report/
+*.log
+/slime-first.png
+
+.vercel
+
+/docs/evidence/feedback-*
+/docs/evidence/home-after.png
