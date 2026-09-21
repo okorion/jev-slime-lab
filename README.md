@@ -12,9 +12,9 @@
 
 | 진행 | 연결 전 · 무료 규칙 | 연결 후 · 실제 Jev | 관찰 포인트 |
 | --- | --- | --- | --- |
-| 시작 · 0턴 | ![규칙 모드 시작](docs/evidence/compare-rule-00.png) | ![Jev 모드 시작](docs/evidence/compare-jev-00.png) | 같은 섬의 중앙 쉼터에서 시작 |
-| 중간 · 5턴 | ![규칙 모드 5턴](docs/evidence/compare-rule-05.png) | ![Jev 모드 5턴](docs/evidence/compare-jev-05.png) | 규칙은 먹이 2개, Jev는 위험 구역을 한 번 지나 먹이 1개 획득 |
-| 결과 · 10턴 | ![규칙 모드 10턴](docs/evidence/compare-rule-10.png) | ![Jev 모드 10턴](docs/evidence/compare-jev-10.png) | 이동 경로·체력·먹이 수와 실제 행동 확률 비교 |
+| 시작 · 0턴 | ![규칙 모드 시작](docs/evidence/compare-rule-00.jpg) | ![Jev 모드 시작](docs/evidence/compare-jev-00.jpg) | 같은 섬의 중앙 쉼터에서 시작 |
+| 중간 · 5턴 | ![규칙 모드 5턴](docs/evidence/compare-rule-05.jpg) | ![Jev 모드 5턴](docs/evidence/compare-jev-05.jpg) | 규칙은 먹이 2개, Jev는 위험 구역을 한 번 지나 먹이 1개 획득 |
+| 결과 · 10턴 | ![규칙 모드 10턴](docs/evidence/compare-rule-10.jpg) | ![Jev 모드 10턴](docs/evidence/compare-jev-10.jpg) | 이동 경로·체력·먹이 수와 실제 행동 확률 비교 |
 
 | 10턴 종료 시점 | 무료 규칙 | 실제 Jev |
 | --- | --- | --- |
