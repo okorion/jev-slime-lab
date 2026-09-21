@@ -1,0 +1,345 @@
+- banner:
+  - link "slime lab 작은 선택의 실험실":
+    - /url: /
+    - text: slime
+    - generic: lab
+    - generic: 작은 선택의 실험실
+  - link "GitHub ↗":
+    - /url: https://github.com/okorion/jev-slime-lab
+- main:
+  - generic: A LITTLE WORLD, A LOT OF DECISIONS
+  - heading "이 작은 친구는 어떤 선택을 할까요?" [level=1]:
+    - text: 이 작은 친구는
+    - text: 어떤 선택을 할까요?
+  - paragraph:
+    - text: 먹이를 찾고, 위험을 피하고, 잠깐 쉬어 가고.
+    - text: Jev의 선택을 관찰하며 나만의 생존 실험을 해보세요.
+  - generic: 10 / 100
+  - text: 작은 선택이 모여
+  - text: 하나의 여정이 됩니다.
+  - region "실험 설정":
+    - generic: 판단 방식
+    - combobox "판단 방식":
+      - option "무료 규칙 모드"
+      - option "Jev · 실제 모델" [selected]
+    - generic: Jev 연결 가능 · 개인 코드 필요
+    - generic: 섬 번호
+    - spinbutton "섬 번호" [disabled]: "42"
+    - button "다른 섬 만들기": ↻ 다른 섬
+  - text: THE HABITAT
+  - heading "슬라임의 작은 섬" [level=2]
+  - generic: TURN 10
+  - generic "실험 슬라임 지도":
+    - button "1열 1행 풀밭": ˇ
+    - button "2열 1행 풀밭": ˇ
+    - button "3열 1행 풀밭": ˇ
+    - button "4열 1행 풀밭": ˇ
+    - button "5열 1행 위험 구역":
+      - generic: ✦
+    - button "6열 1행 풀밭": ˇ
+    - button "7열 1행 먹이"
+    - button "8열 1행 풀밭": ˇ
+    - button "9열 1행 풀밭": ˇ
+    - button "1열 2행 풀밭": ˇ
+    - button "2열 2행 먹이"
+    - button "3열 2행 풀밭": ˇ
+    - button "4열 2행 풀밭": ˇ
+    - button "5열 2행 먹이"
+    - button "6열 2행 위험 구역":
+      - generic: ✦
+    - button "7열 2행 풀밭": ˇ
+    - button "8열 2행 풀밭": ˇ
+    - button "9열 2행 풀밭": ˇ
+    - button "1열 3행 바위"
+    - button "2열 3행 풀밭": ˇ
+    - button "3열 3행 풀밭": ˇ
+    - button "4열 3행 바위"
+    - button "5열 3행 풀밭": ˇ
+    - button "6열 3행 바위"
+    - button "7열 3행 먹이"
+    - button "8열 3행 바위"
+    - button "9열 3행 위험 구역":
+      - generic: ✦
+    - button "1열 4행 풀밭": ˇ
+    - button "2열 4행 풀밭": ˇ
+    - button "3열 4행 바위"
+    - button "4열 4행 위험 구역":
+      - generic: ✦
+    - button "5열 4행 먹이"
+    - button "6열 4행 풀밭": ˇ
+    - button "7열 4행 풀밭": ˇ
+    - button "8열 4행 먹이"
+    - button "9열 4행 풀밭": ˇ
+    - button "1열 5행 바위"
+    - button "2열 5행 바위"
+    - button "3열 5행 풀밭": ˇ
+    - button "4열 5행 풀밭": ˇ
+    - button "5열 5행 쉼터":
+      - generic: ⌂
+    - button "6열 5행 풀밭": ˇ
+    - button "7열 5행 위험 구역":
+      - generic: ✦
+    - button "8열 5행 풀밭 슬라임 위치":
+      - text: ˇ
+    - button "9열 5행 풀밭": ˇ
+    - button "1열 6행 풀밭": ˇ
+    - button "2열 6행 풀밭": ˇ
+    - button "3열 6행 위험 구역":
+      - generic: ✦
+    - button "4열 6행 먹이"
+    - button "5열 6행 풀밭": ˇ
+    - button "6열 6행 바위"
+    - button "7열 6행 풀밭": ˇ
+    - button "8열 6행 풀밭": ˇ
+    - button "9열 6행 풀밭": ˇ
+    - button "1열 7행 풀밭": ˇ
+    - button "2열 7행 바위"
+    - button "3열 7행 풀밭": ˇ
+    - button "4열 7행 풀밭": ˇ
+    - button "5열 7행 풀밭": ˇ
+    - button "6열 7행 위험 구역":
+      - generic: ✦
+    - button "7열 7행 바위"
+    - button "8열 7행 바위"
+    - button "9열 7행 먹이"
+    - button "1열 8행 풀밭": ˇ
+    - button "2열 8행 풀밭": ˇ
+    - button "3열 8행 풀밭": ˇ
+    - button "4열 8행 바위"
+    - button "5열 8행 풀밭": ˇ
+    - button "6열 8행 풀밭": ˇ
+    - button "7열 8행 먹이"
+    - button "8열 8행 풀밭": ˇ
+    - button "9열 8행 위험 구역":
+      - generic: ✦
+    - button "1열 9행 풀밭": ˇ
+    - button "2열 9행 풀밭": ˇ
+    - button "3열 9행 위험 구역":
+      - generic: ✦
+    - button "4열 9행 풀밭": ˇ
+    - button "5열 9행 풀밭": ˇ
+    - button "6열 9행 풀밭": ˇ
+    - button "7열 9행 풀밭": ˇ
+    - button "8열 9행 풀밭": ˇ
+    - button "9열 9행 먹이"
+  - generic: Jev 슬라임
+  - generic: ✳ 맑음 · 고정 환경
+  - generic: 먹이
+  - generic: 쉼터
+  - generic: 위험
+  - generic: 바위
+  - generic: "점선: 지나온 길"
+  - text: ♥ 체력
+  - strong: "90"
+  - progressbar "체력"
+  - text: ϟ 에너지
+  - strong: "50"
+  - progressbar "에너지"
+  - generic: 모은 먹이
+  - strong: 1개
+  - button "▶ 20턴 관찰하기"
+  - button "한 턴씩 →"
+  - button "같은 섬에서 다시 시작": ↺
+  - status: 10턴 · 왼쪽 이동. 실제 Jev 판단을 적용했습니다.
+  - generic "내 손으로 섬 바꾸기 시작 전 사용":
+    - text: 내 손으로 섬 바꾸기
+    - generic: 시작 전 사용
+  - option "먹이" [selected]
+  - option "위험 구역"
+  - option "바위"
+  - option "풀밭"
+  - complementary:
+    - text: INSIDE THE DECISION
+    - heading "선택을 들여다보기" [level=2]
+    - generic: ✳
+    - generic: 왼쪽 이동
+    - paragraph: TURN 10 · jev-1.13.0
+    - generic: 왼쪽 이동
+    - strong: 33.0%
+    - generic: 위로 이동
+    - strong: 29.0%
+    - generic: 아래로 이동
+    - strong: 20.0%
+    - generic: 잠시 쉬기
+    - strong: 18.0%
+    - generic: confidence
+    - strong: "0.110"
+    - generic: API 왕복 시간
+    - strong: 165 ms
+    - paragraph:
+      - text: 확률과 confidence는 모델의 판단입니다.
+      - text: 생존 성적이나 정답률을 의미하지 않아요.
+    - text: A NOTE FOR YOUR SLIME
+    - heading "슬라임에게 한마디" [level=2]
+    - generic: Jev 행동 지침
+    - textbox "Jev 행동 지침": 위험을 피하면서 먹이를 찾아. 체력이 낮아지면 안전한 곳에서 쉬어.
+    - button "조심조심"
+    - button "먹이 탐험가"
+    - button "쉬엄쉬엄"
+    - paragraph: 지침은 Jev 모드에만 적용됩니다. 다음 턴부터 반영돼요.
+    - generic "실제 Jev 연결"
+  - text: SAME ISLAND, DIFFERENT CHOICES
+  - heading "규칙 슬라임과 나란히" [level=2]
+  - generic: 같은 시작 조건
+  - generic "비교 기준 슬라임 지도":
+    - button "1열 1행 풀밭": ˇ
+    - button "2열 1행 풀밭": ˇ
+    - button "3열 1행 풀밭": ˇ
+    - button "4열 1행 풀밭": ˇ
+    - button "5열 1행 위험 구역":
+      - generic: ✦
+    - button "6열 1행 풀밭": ˇ
+    - button "7열 1행 먹이"
+    - button "8열 1행 풀밭": ˇ
+    - button "9열 1행 풀밭": ˇ
+    - button "1열 2행 풀밭": ˇ
+    - button "2열 2행 풀밭": ˇ
+    - button "3열 2행 풀밭 슬라임 위치":
+      - text: ˇ
+    - button "4열 2행 풀밭": ˇ
+    - button "5열 2행 풀밭": ˇ
+    - button "6열 2행 위험 구역":
+      - generic: ✦
+    - button "7열 2행 풀밭": ˇ
+    - button "8열 2행 풀밭": ˇ
+    - button "9열 2행 풀밭": ˇ
+    - button "1열 3행 바위"
+    - button "2열 3행 풀밭": ˇ
+    - button "3열 3행 풀밭": ˇ
+    - button "4열 3행 바위"
+    - button "5열 3행 풀밭": ˇ
+    - button "6열 3행 바위"
+    - button "7열 3행 먹이"
+    - button "8열 3행 바위"
+    - button "9열 3행 위험 구역":
+      - generic: ✦
+    - button "1열 4행 풀밭": ˇ
+    - button "2열 4행 풀밭": ˇ
+    - button "3열 4행 바위"
+    - button "4열 4행 위험 구역":
+      - generic: ✦
+    - button "5열 4행 풀밭": ˇ
+    - button "6열 4행 풀밭": ˇ
+    - button "7열 4행 풀밭": ˇ
+    - button "8열 4행 먹이"
+    - button "9열 4행 풀밭": ˇ
+    - button "1열 5행 바위"
+    - button "2열 5행 바위"
+    - button "3열 5행 풀밭": ˇ
+    - button "4열 5행 풀밭": ˇ
+    - button "5열 5행 쉼터":
+      - generic: ⌂
+    - button "6열 5행 풀밭": ˇ
+    - button "7열 5행 위험 구역":
+      - generic: ✦
+    - button "8열 5행 먹이"
+    - button "9열 5행 풀밭": ˇ
+    - button "1열 6행 풀밭": ˇ
+    - button "2열 6행 풀밭": ˇ
+    - button "3열 6행 위험 구역":
+      - generic: ✦
+    - button "4열 6행 먹이"
+    - button "5열 6행 풀밭": ˇ
+    - button "6열 6행 바위"
+    - button "7열 6행 풀밭": ˇ
+    - button "8열 6행 풀밭": ˇ
+    - button "9열 6행 풀밭": ˇ
+    - button "1열 7행 풀밭": ˇ
+    - button "2열 7행 바위"
+    - button "3열 7행 풀밭": ˇ
+    - button "4열 7행 풀밭": ˇ
+    - button "5열 7행 풀밭": ˇ
+    - button "6열 7행 위험 구역":
+      - generic: ✦
+    - button "7열 7행 바위"
+    - button "8열 7행 바위"
+    - button "9열 7행 먹이"
+    - button "1열 8행 풀밭": ˇ
+    - button "2열 8행 풀밭": ˇ
+    - button "3열 8행 풀밭": ˇ
+    - button "4열 8행 바위"
+    - button "5열 8행 풀밭": ˇ
+    - button "6열 8행 풀밭": ˇ
+    - button "7열 8행 먹이"
+    - button "8열 8행 풀밭": ˇ
+    - button "9열 8행 위험 구역":
+      - generic: ✦
+    - button "1열 9행 풀밭": ˇ
+    - button "2열 9행 풀밭": ˇ
+    - button "3열 9행 위험 구역":
+      - generic: ✦
+    - button "4열 9행 풀밭": ˇ
+    - button "5열 9행 풀밭": ˇ
+    - button "6열 9행 풀밭": ˇ
+    - button "7열 9행 풀밭": ˇ
+    - button "8열 9행 풀밭": ˇ
+    - button "9열 9행 먹이"
+  - paragraph: 규칙 슬라임 · 안전한 최단 경로
+  - table:
+    - rowgroup:
+      - row "이번 실험 Jev 슬라임 규칙 기준선":
+        - columnheader "이번 실험"
+        - columnheader "Jev 슬라임"
+        - columnheader "규칙 기준선"
+    - rowgroup:
+      - row "생존 턴 10 10":
+        - cell "생존 턴"
+        - cell "10"
+        - cell "10"
+      - row "모은 먹이 1개 3개":
+        - cell "모은 먹이"
+        - cell "1개"
+        - cell "3개"
+      - row "위험 노출 1턴 0턴":
+        - cell "위험 노출"
+        - cell "1턴"
+        - cell "0턴"
+  - generic: 체력의 흐름
+  - text: 실험
+  - text: 기준선
+  - img "턴별 실험 슬라임과 규칙 슬라임의 체력 비교"
+  - paragraph: 규칙 모드에서는 두 슬라임이 같은 정책으로 움직입니다. Jev 성능 평가는 실제 모드의 여러 섬에서 비교해 주세요.
+  - text: FIELD NOTES
+  - heading "관찰 기록" [level=2]
+  - button "기록 내려받기 ↓"
+  - generic: 턴
+  - generic: 선택한 행동
+  - generic: 체력 / 에너지
+  - generic: 판단 출처
+  - generic: "10"
+  - strong: 왼쪽 이동
+  - generic: 90 / 50
+  - generic: Jev 실측
+  - generic: "09"
+  - strong: 오른쪽 이동
+  - generic: 90 / 55
+  - generic: Jev 실측
+  - generic: "08"
+  - strong: 왼쪽 이동
+  - generic: 90 / 60
+  - generic: Jev 실측
+  - generic: "07"
+  - strong: 오른쪽 이동
+  - generic: 90 / 65
+  - generic: Jev 실측
+  - generic: "06"
+  - strong: 왼쪽 이동
+  - generic: 90 / 70
+  - generic: Jev 실측
+  - generic: "05"
+  - strong: 오른쪽 이동
+  - generic: 90 / 75
+  - generic: Jev 실측
+  - generic: "04"
+  - strong: 먹이 먹기
+  - generic: 90 / 80
+  - generic: Jev 실측
+  - generic: "03"
+  - strong: 오른쪽 이동
+  - generic: 82 / 50
+  - generic: Jev 실측
+  - generic: 실제 Jev 호출 10회 · 입력 9,429토큰 · 추정 $0.000396
+  - generic: "단가: 입력 100만 토큰당 $0.042 · 2026-09-21 기준"
+  - generic: slimelab · 작게 실험하고, 직접 관찰하기.
+  - link "Jev는 어떻게 동작하나요? ↗":
+    - /url: https://docs.typesafe.ai/introduction
