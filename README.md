@@ -2,9 +2,13 @@
 
 작은 2D 섬에서 슬라임의 행동을 관찰하고 실제 Jev와 결정론적 기준선을 비교합니다. 공개 무료 규칙 모드와 개인 코드로 여는 실제 Jev 모드를 구분합니다.
 
+[공개 실험실 열기](https://jev-slime-lab.vercel.app) · [실제 화면과 검증 기록](docs/VERIFICATION.md)
+
 ## 실행
 
 Node.js 24 LTS 권장. `npm ci`, `npm run dev`로 시작합니다. `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`로 검증합니다.
+
+Chrome 설치 및 실제 키/코드 설정 후 `node scripts/verify.mjs http://127.0.0.1:5173`으로 브라우저 흐름을 검증합니다. 실제 Jev를 5회 호출하므로 소액의 API 사용량이 발생합니다. 선택적으로 두 번째 URL 인수에 AI Action Review Console 주소를 전달하면 그 사이트의 피드백 흐름도 함께 확인합니다.
 
 `.env.example`을 `.env.local`로 복사하고 `TYPESAFE_API_KEY`와 추측하기 어려운 `JEV_ACCESS_CODE`를 설정하면 실제 Jev 모드를 사용할 수 있습니다. 키와 코드는 Git에 포함하지 않습니다. Vercel 배포에서는 같은 이름의 서버 환경 변수를 설정합니다. Vite는 클라이언트에 `VITE_` 변수만 노출하며 이 앱은 비밀에 그 접두사를 사용하지 않습니다.
 

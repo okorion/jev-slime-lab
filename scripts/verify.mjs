@@ -5,7 +5,7 @@ import { mkdir } from "node:fs/promises";
 import assert from "node:assert/strict";
 loadEnvFile(".env.local");
 const slimeUrl = process.argv[2] || "http://127.0.0.1:4182";
-const feedbackUrl = process.argv[3] || "http://127.0.0.1:4183";
+const feedbackUrl = process.argv[3];
 const evidence = process.argv[4] || "docs/evidence";
 await mkdir(evidence, { recursive: true });
 const browser = await chromium.launch({ channel: "chrome", headless: true });
@@ -120,63 +120,71 @@ try {
   console.log(
     "슬라임: 실제 Jev 5턴, 규칙, 맵 편집, 실패 보존, 중단/재시작, 내보내기, 모바일 통과",
   );
-  await page.setViewportSize({ width: 1440, height: 1000 });
-  await page.goto(`${feedbackUrl}/`);
-  await page.screenshot({ path: `${evidence}/home-after.png`, fullPage: true });
-  await page.goto(`${feedbackUrl}/feedback`);
-  await page
-    .locator('select[aria-label="판단 방식"] option[value=jev]:not([disabled])')
-    .waitFor({ state: "attached" });
-  await page.getByRole("button", { name: "피드백 분류하기 →" }).click();
-  await page.getByRole("status").filter({ hasText: "분류가 완료" }).waitFor();
-  assert.equal(await page.locator(".ff-card").count(), 6);
-  assert.match(await page.locator(".ff-metrics").innerText(), /100%/);
-  await page.getByLabel("판단 방식").selectOption("jev");
-  await page.locator(".ff-connection summary").click();
-  await page.getByLabel("개인 실험 코드").fill(code);
-  await page.getByRole("button", { name: "피드백 분류하기 →" }).click();
-  await page
-    .getByRole("status")
-    .filter({ hasText: "분류가 완료" })
-    .waitFor({ timeout: 90000 });
-  assert.equal(await page.locator(".ff-card").count(), 6);
-  assert.ok(await page.locator(".ff-probs progress").count());
-  await page.locator(".ff-connection summary").click();
-  await checkLayout();
-  await page.screenshot({
-    path: `${evidence}/feedback-desktop.png`,
-    fullPage: true,
-  });
-  await page.getByLabel("최종 분류 직접 수정").selectOption("bug");
-  assert.match(
-    await page.locator(".ff-inspect").innerText(),
-    /수정 결과: 버그 제보/,
-  );
-  await page.locator("#threshold").fill("1");
-  assert.match(
-    await page.locator(".ff-inspect").innerText(),
-    /수정 결과: 버그 제보/,
-  );
-  await page
-    .locator("#feedback-text")
-    .fill("정렬 순서를 저장할 수 있으면 좋겠습니다.");
-  await page.getByRole("button", { name: "대기함에 추가 +" }).click();
-  assert.equal(await page.locator(".ff-card").count(), 7);
-  const feedbackDownload = page.waitForEvent("download");
-  await page.getByRole("button", { name: "기록 ↓" }).click();
-  await (
-    await feedbackDownload
-  ).saveAs(`${evidence}/feedback-live-record.json`);
-  await page.setViewportSize({ width: 390, height: 844 });
-  await checkLayout();
-  await page.screenshot({
-    path: `${evidence}/feedback-mobile.png`,
-    fullPage: true,
-  });
+  if (feedbackUrl) {
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await page.goto(`${feedbackUrl}/`);
+    await page.screenshot({
+      path: `${evidence}/home-after.png`,
+      fullPage: true,
+    });
+    await page.goto(`${feedbackUrl}/feedback`);
+    await page
+      .locator(
+        'select[aria-label="판단 방식"] option[value=jev]:not([disabled])',
+      )
+      .waitFor({ state: "attached" });
+    await page.getByRole("button", { name: "피드백 분류하기 →" }).click();
+    await page.getByRole("status").filter({ hasText: "분류가 완료" }).waitFor();
+    assert.equal(await page.locator(".ff-card").count(), 6);
+    assert.match(await page.locator(".ff-metrics").innerText(), /100%/);
+    await page.getByLabel("판단 방식").selectOption("jev");
+    await page.locator(".ff-connection summary").click();
+    await page.getByLabel("개인 실험 코드").fill(code);
+    await page.getByRole("button", { name: "피드백 분류하기 →" }).click();
+    await page
+      .getByRole("status")
+      .filter({ hasText: "분류가 완료" })
+      .waitFor({ timeout: 90000 });
+    assert.equal(await page.locator(".ff-card").count(), 6);
+    assert.ok(await page.locator(".ff-probs progress").count());
+    await page.locator(".ff-connection summary").click();
+    await checkLayout();
+    await page.screenshot({
+      path: `${evidence}/feedback-desktop.png`,
+      fullPage: true,
+    });
+    await page.getByLabel("최종 분류 직접 수정").selectOption("bug");
+    assert.match(
+      await page.locator(".ff-inspect").innerText(),
+      /수정 결과: 버그 제보/,
+    );
+    await page.locator("#threshold").fill("1");
+    assert.match(
+      await page.locator(".ff-inspect").innerText(),
+      /수정 결과: 버그 제보/,
+    );
+    await page
+      .locator("#feedback-text")
+      .fill("정렬 순서를 저장할 수 있으면 좋겠습니다.");
+    await page.getByRole("button", { name: "대기함에 추가 +" }).click();
+    assert.equal(await page.locator(".ff-card").count(), 7);
+    const feedbackDownload = page.waitForEvent("download");
+    await page.getByRole("button", { name: "기록 ↓" }).click();
+    await (
+      await feedbackDownload
+    ).saveAs(`${evidence}/feedback-live-record.json`);
+    await page.setViewportSize({ width: 390, height: 844 });
+    await checkLayout();
+    await page.screenshot({
+      path: `${evidence}/feedback-mobile.png`,
+      fullPage: true,
+    });
+    assert.deepEqual(errors, []);
+    console.log(
+      "피드백: 규칙 6건, 실제 Jev 6건, 수정, 임계값, 입력 추가, 내보내기, 모바일, 브라우저 오류 없음",
+    );
+  }
   assert.deepEqual(errors, []);
-  console.log(
-    "피드백: 규칙 6건, 실제 Jev 6건, 수정, 임계값, 입력 추가, 내보내기, 모바일, 브라우저 오류 없음",
-  );
 } finally {
   await browser.close();
 }

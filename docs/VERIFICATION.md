@@ -1,5 +1,7 @@
 # 검증 기록 · 2026-09-21
 
+운영 주소 `https://jev-slime-lab.vercel.app`에서 실제 Jev 5턴과 동일한 브라우저 흐름을 다시 통과했다. 비인증 POST 401, 개인 코드가 있는 POST 200을 확인했다. GitHub CI 통과 및 Vercel 운영 배포 READY를 확인했다.
+
 - lint, TypeScript, 단위 테스트 9개, production build 통과.
 - 100개 seed에서 규칙 기준선의 유효 행동과 100턴 이내 종료 확인.
 - 브라우저: Chrome 1440×1000 / 390×844, 실제 Jev 5턴, 동일 맵 편집, 규칙 기준선, API 오류 시 턴 보존, 실행 중 초기화 후 오래된 응답 무시, 자동 관찰 중단, JSON 다운로드 확인.
